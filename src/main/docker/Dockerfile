@@ -1,5 +1,5 @@
 # FROM openjdk:8-jre-alpine
-FROM docker.lassiterdynamics.com:5000/centos-java
+FROM docker.lassiterdynamics.com:5000/centos7-java8
 
 
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
@@ -13,3 +13,4 @@ CMD echo "The application will start in ${JHIPSTER_SLEEP}s..." && \
 EXPOSE 8080 5701/udp
 
 ADD *.war /app.war
+USER centos
