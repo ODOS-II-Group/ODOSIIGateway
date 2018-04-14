@@ -17,12 +17,7 @@ pipeline {
             steps {
                 script{
                   Common.slack 'Building...'
-                  // custom build script due to non-standard build requirements
-                  sh """
-                    yarn
-                    yarn install
-                    ./gradlew build bootRepackage -Pprod --stacktrace
-                  """
+                  Common.jHipsterBuild()
                 }
             }
         }
