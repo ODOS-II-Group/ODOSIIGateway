@@ -17,6 +17,10 @@ pipeline {
             steps {
                 script{
                   Common.slack 'Building...'
+                  sh """
+                    yarn
+                    yarn install
+                  """
                   Common.jHipsterBuild()
                 }
             }
