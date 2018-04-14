@@ -1,8 +1,6 @@
 //get common library inclusion
 def Common = new odos.jenkins.Common()
 
-def GIT_URL=scm.getUserRemoteConfigs()[0].getUrl()
-
 pipeline {
     agent any
 
